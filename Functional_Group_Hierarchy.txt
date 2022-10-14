@@ -64,6 +64,11 @@ Halogen	[$([F,Cl,Br,I]-!@[#6]);!$([F,Cl,Br,I]-[C,S](=[O,S,N]));!$([F,Cl,Br,I]-!@
   Halogen.Bromine.Aliphatic	[Br;$(Br-!@C);!$(Br-!@C-!@[F,Cl,Br,I]);!$(Br-[C,S](=[O,S,N]))]	Aliphatic Bromine
   Halogen.Bromine.Aromatic	[Br;$(Br-!@c)]	Aromatic Bromine
   Halogen.Bromine.BromoKetone	[Br;$(Br-[CH2]-C(=O)-[#6])]	Bromoketone
+  
+Haloalkyl	F[$(C-!@[#6])](F)(F)		Haloalkyl
+	Haloalkyl.Aliphatic	F[$(C-!@C)](F)(F)	Haloalkyl Aliphatic
+	Haloalkyl.Aromatic	F[$(C-!@c)](F)(F)	Haloalkyl Aromatic
+
 		
 Azide	[N;H0;$(N-[#6]);D2]=[N;D2]=[N;D1]	Azide
   Azide.Aromatic	[N;H0;$(N-c);D2]=[N;D2]=[N;D1]	Aromatic Azide
@@ -226,14 +231,22 @@ Phosphonic acid			[$(P-!@[#6])]([#8])([#8])=O	Phosphonic acid
 Phosphonic acid.Aliphatic	[$(P-!@C)]([#8])([#8])=O	Phosphonic acid Aliphatic
 Phosphonic acid.Aromatic 	[$(P-!@c)]([#8])([#8])=O	Phosphonic acid Aromatic
 
-Phosphate	[$(O-!@[#6])]P([#8])([#8])=O
-Phosphate.Aromatic	[$(O-!@c)]P([#8])([#8])=O
-Phosphate.Aliphatic	[$(O-!@C)]P([#8])([#8])=O
+Phosphate			[$(O-!@[#6])]P([#8])([#8])=O	Phosphate
+Phosphate.Aromatic	[$(O-!@c)]P([#8])([#8])=O		Phosphate Aromatic
+Phosphate.Aliphatic	[$(O-!@C)]P([#8])([#8])=O		Phosphate Aliphatic
 
-('', Chem.MolFromSmarts('')),
-                            ('Phosphate.Aromatic', Chem.MolFromSmarts(')),
-                            ('Phosphate.Aliphatic', Chem.MolFromSmarts('[$(O-!@C)]P([#8])([#8])=O')),
+Phosphodiester			[$(O-!@[#6])]P([#8][#6])([#8])=O	Phosphodiester
+Phosphodiester.Aliphatic	[$(O-!@C)]P([#8][#6])([#8])=O	Phosphodiester Aliphatic
+Phosphodiester.Aromatic		[$(O-!@c)]P([#8][#6])([#8])=O	Phosphodiester Aromatic
 
+Sulfoxide	[$([#16X3]-!@[#6])]=[OX1]	Sulfoxide # Low specificity
+Sulfoxide.Aliphatic	[$([#16X3]-!@C)]=[OX1]	Sulfoxide Aliphatic
+Sulfoxide.Aromatic	[$([#16X3]-!@c)]=[OX1]	Sulfoxide Aromatic
+
+Sulfone	[$([#16X4]-!@[#6])](=[OX1])=[OX1]	Sulfone #Low specificity: Hits all sulfones, including heteroatom-substituted sulfones: sulfonic acid, sulfonate, sulfuric acid mono- & di- esters, sulfamic acid, sulfamate, sulfonamide
+Sulfone.Aliphatic	[$([#16X4]-!@C)](=[OX1])=[OX1]	Sulfone Aliphatic
+Sulfone.Aromatic	[$([#16X4]-!@c)](=[OX1])=[OX1]	Sulfone Aromatic
+			 
 Thiazole		
 Furan		
 Isothiazole		
