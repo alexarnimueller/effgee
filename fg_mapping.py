@@ -14,7 +14,6 @@ import argparse
 import pandas as pd
 from rdkit.Chem import MolFromSmiles, ParseMolQueryDefFile, CanonSmiles
 
-
 def read_fg_hierarchy(fg_file: str = "./Functional_Group_Hierarchy.txt"):
     """
     Load and process the functional group hierarchy definition
@@ -49,11 +48,12 @@ def match_fg_hierarchy(smiles: str, hierarchy: pd.DataFrame, lowest: bool = True
         match = m.GetSubstructMatches(row["Pattern"])
         if len(match):
             for mtch in match:
-                low_match[tuple(sorted(mtch))] = row["Name"]  # sort tuple of atom matches to match lower levels
+                for atm_idx in mtch:
+                    low_match[atm_idx] = row["Name"]  # sort tuple of atom matches to match lower levels
                 all_match[row["Name"]] = len(match)  # store count
     if lowest:
         if atoms:
-            return {v: (all_match[v], k) for k, v in low_match.items()}
+            return {v: (all_match[v], sorted([k2 for k2,v2 in low_match.items() if v2 == v])) for v in low_match.values()}
         return {v: all_match[v] for v in low_match.values()}
     return all_match
 

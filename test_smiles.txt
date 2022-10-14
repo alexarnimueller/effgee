@@ -11,7 +11,6 @@ o1cnc(c1)c2cn(c3oncc3)c(n2)n4cnnn4	isoxazole
 o1cnc(c1)c2cn(c3oncc3)c(n2)n4cnnn4	tetrazole
 o1cnc(c1)c2cn(c3oncc3)c(n2)n4cnnn4	imidazole
 CC(=NN=CC(N)(N)C(C=C)C#C)C	alkene.terminal
-CC(=NN=CC(N)(N)C(C=C)C#C)C	alkyne.terminal
 CC(=NN=CC(N)(N)C(C=C)C#C)C	azine
 CC(C)(C)C(=N)N	amidine
 CNC(=O)OC	carbamate
