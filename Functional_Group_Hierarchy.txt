@@ -52,7 +52,7 @@ Halogen	[$([F,Cl,Br,I]-!@[#6]);!$([F,Cl,Br,I]-[C,S](=[O,S,N]));!$([F,Cl,Br,I]-!@
   Halogen.Aliphatic	[$([F,Cl,Br,I]-!@C);!$([F,Cl,Br,I]-!@C-!@[F,Cl,Br,I])]	Aliphatic
   Halogen.Fluorine	[$([F]-!@[#6]);!$([F]-!@C-!@[F,Cl,Br,I]);!$([F]-[C,S](=[O,S,N]))]	Fluorine
   Halogen.Fluorine.Aliphatic	[$([F]-!@C);!$([F]-!@C-!@[F,Cl,Br,I]);!$([F]-[C,S](=[O,S,N]))]	Aliphatic Fluorine
-  Halogen.Fluorine.Aromatic	[$([F]-!@c)]	Aromatic Fluorine
+  Halogen.Fluorine.Aromatic	[F;$(F-!@c)]	Aromatic Fluorine
   Halogen.Fluorine.Trifluoromethyl	[F][C]([F])[F]	Trifluoromethyl
   Halogen.Chlorine	[$([Cl]-!@[#6]);!$([Cl]-!@C-!@[F,Cl,Br,I]);!$([Cl]-[C,S](=[O,S,N]))]	Chlorine
   Halogen.Chlorine.Aliphatic	[$([Cl]-!@C);!$([Cl]-!@C-!@[F,Cl,Br,I]);!$([Cl]-[C,S](=[O,S,N]))]	Aliphatic Chlorine
