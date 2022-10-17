@@ -1,225 +1,256 @@
-AcidChloride	C(=O)Cl	Acid Chloride			
-  AcidChloride.Aromatic	[$(C-!@[a])](=O)(Cl)	Aromatic			
-  AcidChloride.Aliphatic	[$(C-!@[A;!Cl])](=O)(Cl)	Aliphatic			
-					
-CarboxylicAcid	C(=O)[O;H,-]	Carboxylic acid			
-  CarboxylicAcid.Aromatic	[$(C-!@[a])](=O)([O;H,-])	Aromatic			
-  CarboxylicAcid.Aliphatic	[$(C-!@[A;!O])](=O)([O;H,-])	Aliphatic			
-  CarboxylicAcid.AlphaAmino	[$(C-[C;!$(C=[!#6])]-[N;!H0;!$(N-[!#6;!#1]);!$(N-C=[O,N,S])])](=O)([O;H,-])	alpha Amino Acid			
-					
-SulfonylChloride	[$(S-!@[#6])](=O)(=O)(Cl)	Sulfonyl Chloride			
-  SulfonylChloride.Aromatic	[$(S-!@c)](=O)(=O)(Cl)	Aromatic			
-  SulfonylChloride.Aliphatic	[$(S-!@C)](=O)(=O)(Cl)	Aliphatic			
-					
-Amine	[N;!$(N=[*]);$(N-[#6]);!$(N-[!#6;!#1]);!$(N-C=[O,N,S])]	Amine			
-  Amine.Primary	[N;H2;D1;$(N-!@[#6]);!$(N-C=[O,N,S])]	Primary			
-  Amine.Primary.Aromatic	[N;H2;D1;$(N-!@c);!$(N-C=[O,N,S])]	Primary aromatic			
-  Amine.Primary.Aliphatic	[N;H2;D1;$(N-!@C);!$(N-C=[O,N,S])]	Primary aliphatic			
-  Amine.Secondary	[N;H1;D2;$(N(-[#6])-[#6]);!$(N-C=[O,N,S])]	Secondary amine			
-  Amine.Secondary.Aromatic	[N;H1;D2;$(N(-[c])-[#6]);!$(N-C=[O,N,S])]	Secondary aromatic			
-  Amine.Secondary.Aliphatic	[N;H1;D2;$(N(-C)-C);!$(N-C=[O,N,S])]	Secondary aliphatic			
-  Amine.Tertiary	[N;H0;D3;!R;$(N(-[#6])(-[#6])-[#6]);!$(N-C=[O,N,S])]	Tertiary			
-  Amine.Tertiary.Aromatic	[N;H0;D3;!R;$(N(-[c])(-[#6])-[#6]);!$(N-C=[O,N,S])]	Tertiary aromatic			
-  Amine.Tertiary.Aliphatic	[N;H0;D3;!R;$(N(-C)(-C)-C);!$(N-C=[O,N,S])]	Tertiary aliphatic			
-  Amine.Aromatic	[N;!R;$(N-c);!$(N-[!#6;!#1]);!$(N-C=[O,N,S])]	Aromatic			
-  Amine.Aliphatic	[N;!R;!$(N=[*]);!$(N-c);$(N-C);!$(N-[!#6;!#1]);!$(N-C=[O,N,S])]	Aliphatic			
-  Amine.Cyclic	[N;R;$(N-[#6]);!$(N-[!#6;!#1]);!$(N-C=[O,N,S])]	Cyclic			
-					
-Ammonium.Quaternary [NX4] ammonium-quaternary					
-					
-BoronicAcid	[$(B-!@[#6])](O)(O)	Boronic Acid			
-  BoronicAcid.Aromatic	[$(B-!@c)](O)(O)	Aromatic			
-  BoronicAcid.Aliphatic	[$(B-!@C)](O)(O)	Aliphatic			
-					
-Isocyanate	[$(N-!@[#6])](=!@C=!@O)	Isocyanate			
-  Isocyanate.Aromatic	[$(N-!@c)](=!@C=!@O)	Aromatic			
-  Isocyanate.Aliphatic	[$(N-!@C)](=!@C=!@O)	Aliphatic			
-					
-Isothiocyanate	[$(N-!@[#6])](=!@C=!@S)	Isothiocyanate			
-  Isothiocyanate.Aromatic	[$(N-!@c)](=!@C=!@S)	Aromatic			
-  Isothiocyanate.Aliphatic	[$(N-!@C)](=!@C=!@S)	Aliphatic			
-					
-Alcohol	[O;H1;$(O-!@[#6;!$(C=!@[O,N,S])])]	Alcohol			
-  Alcohol.Aromatic	[O;H1;$(O-!@c)]	Aromatic			
-  Alcohol.Aliphatic	[O;H1;$(O-!@[C;!$(C=!@[O,N,S])])]	Aliphatic			
-					
-Aldehyde	[CH;D2;!$(C-[!#6;!#1])]=O	Aldehyde			
-  Aldehyde.Aromatic	[CH;D2;$(C-!@[a])](=O)	Aromatic			
-  Aldehyde.Aliphatic	[CH;D2;$(C-!@C)](=O)	Aliphatic			
-					
-Halogen	[$([F,Cl,Br,I]-!@[#6]);!$([F,Cl,Br,I]-[C,S](=[O,S,N]));!$([F,Cl,Br,I]-!@[#6]-[F,Cl,Br,I])]	Halogen			
-  Halogen.Aromatic	[F,Cl,Br,I;$(*-!@c)]	Aromatic			
-  Halogen.Aliphatic	[$([F,Cl,Br,I]-!@C);!$([F,Cl,Br,I]-!@C-!@[F,Cl,Br,I])]	Aliphatic			
-  Halogen.Fluorine	[$([F]-!@[#6]);!$([F]-!@C-!@[F,Cl,Br,I]);!$([F]-[C,S](=[O,S,N]))]	Fluorine			
-  Halogen.Fluorine.Aliphatic	[$([F]-!@C);!$([F]-!@C-!@[F,Cl,Br,I]);!$([F]-[C,S](=[O,S,N]))]	Aliphatic Fluorine			
-  Halogen.Fluorine.Aromatic	[$([F]-!@c)]	Aromatic Fluorine			
-  Halogen.Fluorine.Trifluoromethyl	[F][C]([F])[F]	Trifluoromethyl			
-  Halogen.Chlorine	[$([Cl]-!@[#6]);!$([Cl]-!@C-!@[F,Cl,Br,I]);!$([Cl]-[C,S](=[O,S,N]))]	Chlorine			
-  Halogen.Chlorine.Aliphatic	[$([Cl]-!@C);!$([Cl]-!@C-!@[F,Cl,Br,I]);!$([Cl]-[C,S](=[O,S,N]))]	Aliphatic Chlorine			
-  Halogen.Chlorine.Aromatic	[$([Cl]-!@c)]	Aromatic Chlorine			
-  Halogen.Iodine	[$([I]-!@[#6]);!$([I]-!@C-!@[F,Cl,Br,I]);!$([I]-[C,S](=[O,S,N]))]	Iodine			
-  Halogen.Iodine.Aliphatic	[$([I]-!@C);!$([I]-!@C-!@[F,Cl,Br,I]);!$([I]-[C,S](=[O,S,N]))]	Aliphatic Iodine			
-  Halogen.Iodine.Aromatic	[$([I]-!@c)]	Aromatic Iodine			
-  Halogen.Bromine	[Br;$([Br]-!@[#6]);!$([Br]-!@C-!@[F,Cl,Br,I]);!$([Br]-[C,S](=[O,S,N]))]	Bromine			
-  Halogen.Bromine.Aliphatic	[Br;$(Br-!@C);!$(Br-!@C-!@[F,Cl,Br,I]);!$(Br-[C,S](=[O,S,N]))]	Aliphatic Bromine			
-  Halogen.Bromine.Aromatic	[Br;$(Br-!@c)]	Aromatic Bromine			
-  Halogen.Bromine.BromoKetone	[Br;$(Br-[CH2]-C(=O)-[#6])]	Bromoketone			
-  					
-Haloalkyl	F[$(C-!@[#6])](F)(F)	Haloalkyl			
- Haloalkyl.Aliphatic	F[$(C-!@C)](F)(F)	Haloalkyl Aliphatic			
- Haloalkyl.Aromatic	F[$(C-!@c)](F)(F)	Haloalkyl Aromatic			
-					
-					
-Azide	[N;H0;$(N-[#6]);D2]=[N;D2]=[N;D1]	Azide			
-  Azide.Aromatic	[N;H0;$(N-c);D2]=[N;D2]=[N;D1]	Aromatic Azide			
-  Azide.Aliphatic	[N;H0;$(N-C);D2]=[N;D2]=[N;D1]	Aliphatic Azide			
-					
-Nitro	[N;H0;$(N-[#6]);D3](=[O;D1])~[O;D1]	Nitro			
-  Nitro.Aromatic	[N;H0;$(N-c);D3](=[O;D1])~[O;D1]	Aromatic Nitro			
-  Nitro.Aliphatic	[N;H0;$(N-C);D3](=[O;D1])~[O;D1]	Aliphatic Nitro			
-					
-CarboxylicEster	[#6][CR0](=[O])-[O]-[!#1]	Carboxylic Ester			
-  CarboxylicEster.Aromatic	[c][CR0](=[O])-[O]-[!#1]	Aromatic			
-  CarboxylicEster.Aliphatic	[C][CR0](=[O])-[O]-[!#1]	Aliphatic			
-  					
-					
-Sulfoxide	[SX4](=[O])([*])([*])[*]	Sulfoxide			
-  Sulfoxide.Sulfone	[SX4](=[O])([*])(=[O])[*]	Sulfone			
-  Sulfoxide.Sulfone.Sulfonamide	[SX4](=[O])([#7])(=[O])[!#7]	Sulfonamide			
-  Sulfoxide.Sulfone.Sulfamide	[SX4](=[O])([#7])(=[O])[#7]	Sulfamide			
-  Sulfoxide.Sulfone.SulfonicAcid	[SX4](=[O])([OH1])(=[O])[*] Sulfonic Acid				
-  Sulfoxide.Sulfone.SulfonylChloride	[SX4](=[O])([Cl])(=[O])[*]	Sulfonyl Chloride			
-					
-Imine	[#6](=[#7][#1,#6])([#1,#6])[#6]	Imine			
-  Imine.Aldo.Primary	[#6](=[#7][#1])([#1])[#6]	Primary aldimine			
-  Imine.Aldo.Secondary	[#6](=[#7][#6])([#1])[#6]	Secondary aldimine			
-  Imine.Keto.Primary	[#6](=[#7][#1])([#6])[#6]	Primary ketimine			
-  Imine.Keto.Secondary	[#6](=[#7][#6])([#6])[#6]	Secondary ketimine			
-					
-Organometal	[#6]-[Mg,Si,Sn,Zn,Hg]				
-  Organometal.Magnesium	[#6]-[Mg]	organomagnesium			
-  Organometal.Silicon	[#6]-[Si]	organosilicon			
-  Organometal.Tin	[#6]-[Sn]	organotin			
-  Organometal.Zinc	[#6]-[Zn]	organozinc			
-  Organometal.Mercury	[#6]-[Hg]	organomercury			
-					
-Alkyne	CC#C	alkene			
-  Alkyne.Terminal	CC#[CH]	terminal alkene			
-  Alkyne.Conjugated	CC#CC#*	terminal alkene			
-					
-Alkene	CC=C	alkene			
-  Alkene.Terminal	CC=[CH2]	terminal alkene			
-  Alkene.Conjugated	CC=C=*	conjugated alkene			
-  					
-Alkene	[$(C-!@[#6])](=C)	Alkene			
- Alkene.Aliphatic	[$(C-!@C)](=C) 	Alkene Aliphatic			
- Alkene.Aromatic	[$(C-!@c)](=C)	Alkene Aromatic			
-					
-Alkyne	[$(C-!@[#6])](#C)	Alkyne			
- Alkyne.Aliphatic	[$(C-!@C)](#C)	Alkyne Aliphatic			
- Alkyne.Aromatic	[$(C-!@c)](#C)	Alkyne Aromatic			
-Acetal					
-Amidine					
-Aminal					
-Azo					
-Carbamate					
-Carbonate					
-CarboxylicAmide					
-CarboxylicAnhydride					
-Chloroformate					
-Disulfide					
-Epoxide					
-Ether	[$(O-!@[#6])]([#6])[#6]	Ether			
- Ether.Aliphatic	[$(O-!@C)]([#6])[#6]	Ether Aliphatic			
- Ether.Aromatic	[$(O-!@c)]([#6])[#6]	Ether Aromatic			
-Ester	O([#6])[$(C-!@[#6])](=O)	Ester			
- Ester.Aliphatic	O([#6])[$(C-!@[C])](=O)	Ester Aliphatic			
- Ester.Aromatic	O([#6])[$(C-!@c)](=O)	Ester Aromatic			
-Amide	[OX1]=[$(C-!@[#6])][$(N-!@[#6])]	Amide			
- Amide.Aliphatic	[OX1]=[$(C-!@C)][$(N-!@C)]	Amide Aliphatic			
- Amide.Aromatic	[OX1]=[$(C-!@c)][$(N-!@c)]	Amide Aromatic			
-Guanidine					
-Hemiacetal					
-Hemiaminal					
-Hydrazide					
-Azine					
-Hydrazine					
-Hydrazone					
-Hydroperoxide					
-Imide					
-Isonitrile					
-Ketone	[$(C-!@[#6])](=O)[#6]	Ketone			
- Ketone.Aliphatic	 [$(C-!@[C])](=O)[#6]	Ketone Aliphatic			
- Ketone.Aromatic	[$(C-!@[a])](=O)[#6]	Ketone Aromatic			
-Methoxy					
-Nitrile	[$(C-!@[#6])](#N)	Nitrile			
- Nitrile.Aliphatic	[$(C-!@C)](#N)	Nitrile Aliphatic			
- Nitrile.Aromatic	[$(C-!@c)](#N)	Nitrile Aromatic			
-Acylcyanide	[$([#6]-!@[#6])](=O)C#N	Acylcyanide			
- Acylcyanide.Aliphatic	[$([#6]-!@C)](=O)C#N	Acylcyanide Aliphatic			
- Acylcyanide.Aromatic	[$([#6]-!@c)](=O)C#N	Acylcyanide Aromatic			
-Nitroso					
-Oxazine					
-Oxime					
-Peroxide					
-Thioacetal					
-Dithioacetal					
-Thioamide					
-Thiocarbamate					
-Thiocarbamate					
-Thiocarbonate					
-Thiocarbonate					
-Thioester	S([#6])[$(C-!@[#6])](=O)	Thioester			
-Thioester.Aliphatic	S([#6])[$(C-!@C)](=O)	Thioester Aliphatic			
-Thioester.Aromatic	S([#6])[$(C-!@c)](=O)	Thioester Aromatic			
-Thioether (sulfide)					
-Thiol	[S;H1;$(O-!@[#6;!$(C=!@[O,N])])]	Thiol			
- Thiol.Aliphatic	[[S;H1;$(O-!@[C;!$(C=!@[O,N])])]	Thiol Aliphatic			
- Thiol.Aromatic	[S;H1;$(S-!@c)]	Thiol Aromatic			Thiol Aromatic
-Thiophene					
-Thiourea					
-Urea					
-Xanthate					
-Lactam					
-Lactone					
-SpiroRing					
-Piperazine					
-Aniline					
-Indole					
-Oxazole					
-Isoxazole					
-Oxadiazole					
-Oxadiazole					
-Oxadiazole					
-Furazan					
-Imidazole					
-Pyrazole					
-Triazole					
-Triazole					
-Tetrazole					
-Pentazole					
-Phenyl	c1cccc1[$(c-!@[#6])]	Phenyl			
- Phenyl.Aliphatic	c1cccc1[$(c-!@C)]	Phenyl Aliphatic			
- Phenyl.Aromatic	c1cccc1[$(c-!@c)]	Phenyl Aromatic			
-Phosphonic acid	[$(P-!@[#6])]([#8])([#8])=O	Phosphonic acid			
- Phosphonic acid.Aliphatic	[$(P-!@C)]([#8])([#8])=O	Phosphonic acid Aliphatic			
- Phosphonic acid.Aromatic 	[$(P-!@c)]([#8])([#8])=O	Phosphonic acid Aromatic			
-Phosphate	[$(O-!@[#6])]P([#8])([#8])=O	Phosphate			
- Phosphate.Aromatic	[$(O-!@c)]P([#8])([#8])=O	Phosphate Aromatic			
- Phosphate.Aliphatic	[$(O-!@C)]P([#8])([#8])=O	Phosphate Aliphatic			
-Phosphodiester	[$(O-!@[#6])]P([#8][#6])([#8])=O	Phosphodiester			
- Phosphodiester.Aliphatic	[$(O-!@C)]P([#8][#6])([#8])=O	Phosphodiester Aliphatic			
- Phosphodiester.Aromatic	[$(O-!@c)]P([#8][#6])([#8])=O	Phosphodiester Aromatic			
-Sulfoxide	[$([#16X3]-!@[#6])]=[OX1]	Sulfoxide # Low specificity			
- Sulfoxide.Aliphatic	[$([#16X3]-!@C)]=[OX1]	Sulfoxide Aliphatic			
- Sulfoxide.Aromatic	[$([#16X3]-!@c)]=[OX1]	Sulfoxide Aromatic			
-Sulfone	[$([#16X4]-!@[#6])](=[OX1])=[OX1]	Sulfone #Low specificity: Hits all sulfones, including heteroatom-substituted sulfones: sulfonic acid, sulfonate, sulfuric acid mono- & di- esters, sulfamic acid, sulfamate, sulfonamide			
- Sulfone.Aliphatic	[$([#16X4]-!@C)](=[OX1])=[OX1]	Sulfone Aliphatic			
- Sulfone.Aromatic	[$([#16X4]-!@c)](=[OX1])=[OX1]	Sulfone Aromatic			
-Thiazole					
-Furan					
-Isothiazole					
-Pyridine					
-Pyrrolidine					
-Pyrrole					
-Piperidine					
+// Created by Greg Landrum, October 2006
+// Updated at RDKit UGM 2022 by Alex Müller, Jan Wollschläger and Rasmus Mejborg Borup
+//
+//  Format: Name\tSmarts\tLabel\tRemovalReaction (optional)
+//
+//  NOTES:
+//     1) be sure to make the distinguishing feature of the functional group
+//        the first atom in the pattern
+//     2) the RemovalReaction (if present) is used to remove the functional
+//        group from the molecule. This is necessary for cases like boronic
+//        ethers where the full functional group cannot be specified in SMARTS.
+//
+
+AcidChloride	[#6;X3;!R](=[#8])[#17]
+  AcidChloride.Aromatic	[$([#6;X3;!R][#6;a])](=[#8])[#17]
+  AcidChloride.Aliphatic	[$([#6;X3;!R][#6;A])](=[#8])[#17]
+	
+CarboxylicAcid	[#6;X3;!R](=[#8])[#8;H1,-]
+  CarboxylicAcid.Aromatic	[$([#6;X3;!R][#6;a])](=[#8])[#8;H1,-]
+  CarboxylicAcid.Aliphatic	[$([#6;X3;!R][#6;A])](=[#8])[#8;H1,-]
+  CarboxylicAcid.AlphaAmino	[$([#6;X3;!R]-[#6;!$([#6]=[!#6])]-[#7;!H0;!$([#7]-[!#6;!#1]);!$([#7]-[#6]=[#8,#7,#16])])](=[#8])([#8;H1,-])
+	
+SulfonylHalogen	[$([#16][#6])](=[#8])(=[#8])([#9,#17,#35,#53])
+  SulfonylHalogen.Chloride	[$([#16][#6])](=[#8])(=[#8])([#17])
+    SulfonylHalogen.Chloride.Aromatic	[$([#16][#6;a])](=[#8])(=[#8])([#17])
+    SulfonylHalogen.Chloride.Aliphatic	[$([#16][#6;A])](=[#8])(=[#8])([#17])
+  SulfonylHalogen.Fluoride	[$([#16][#6])](=[#8])(=[#8])([#9])
+    SulfonylHalogen.Fluoride.Aromatic	[$([#16][#6;a])](=[#8])(=[#8])([#9])
+    SulfonylHalogen.Fluoride.Aliphatic	[$([#16][#6;A])](=[#8])(=[#8])([#9])
+	
+Amine	[#7;!$([#7]~[!#1!#6]);!$([#7][#6]~[!#1!#6])]
+  Amine.Primary	[#7;H2;D1;!$([#7]~[!#1!#6]);!$([#7][#6]~[!#1!#6]);!$([#7]@[*])]
+    Amine.Primary.Aliphatic	[#7;H2;D1;$([#7][#6;A]);!$([#7]~[!#1!#6]);!$([#7][#6]~[!#1!#6]);!$([#7]@[*])]
+    Amine.Primary.Aromatic	[#7;H2;D1;$([#7][#6;a]);!$([#7]~[!#1!#6]);!$([#7][#6]~[!#1!#6]);!$([#7]@[*])]
+  Amine.Secondary	[#7;H1;D2;!$([#7]~[!#1!#6]);!$([#7][#6]~[!#1!#6]);!$([#7]@[*])]
+    Amine.Secondary.Aliphatic	[#7;H1;D2;$([#7][#6;A]);!$([#7]~[!#1!#6]);!$([#7][#6]~[!#1!#6]);!$([#7]@[*])]
+    Amine.Secondary.Aromatic	[#7;H1;D2;$([#7][#6;a]);!$([#7]~[!#1!#6]);!$([#7][#6]~[!#1!#6]);!$([#7]@[*])]
+  Amine.Tertiary	[#7;H0;D3;!$([#7]~[!#1!#6]);!$([#7][#6]~[!#1!#6]);!$([#7]@[*])]
+    Amine.Tertiary.Aliphatic	[#7;H0;D3;$([#7][#6;A]);!$([#7]~[!#1!#6]);!$([#7][#6]~[!#1!#6]);!$([#7]@[*])]
+    Amine.Tertiary.Aromatic	[#7;H0;D3;$([#7][#6;a]);!$([#7]~[!#1!#6]);!$([#7][#6]~[!#1!#6]);!$([#7]@[*])]
+	
+Ammonium.Quaternary	[#7;X4]
+	
+BoronicAcid	[$([#5]-!@[#6])]([#8])([#8])
+  BoronicAcid.Aromatic	[$([#5]-!@[#6;a])]([#8])([#8])
+  BoronicAcid.Aliphatic	[$([#5]-!@[#6;A])]([#8])([#8])
+	
+Isocyanate	[$([#7]-!@[#6])](=!@[#6]=!@[#8])
+  Isocyanate.Aromatic	[$([#7]-!@[#6;a])](=!@[#6]=!@[#8])
+  Isocyanate.Aliphatic	[$([#7]-!@[#6;A])](=!@[#6]=!@[#8])
+	
+Isothiocyanate	[$([#7]-!@[#6])](=!@[#6]=!@[#16])
+  Isothiocyanate.Aromatic	[$([#7]-!@[#6;a])](=!@[#6]=!@[#16])
+  Isothiocyanate.Aliphatic	[$([#7]-!@[#6;A])](=!@[#6]=!@[#16])
+	
+Alcohol	[#8;D1;H1;$([#8]-!@[#6;!$([#6]=!@[!#6!#1])])]
+  Alcohol.Aromatic	[#8;D1;H1;$([#8]-!@[#6;a;!$([#6;a]=!@[!#6!#1])])]
+  Alcohol.Aliphatic	[#8;D1;H1;$([#8]-!@[#6;A;!$([#6;A]=!@[!#6!#1])])]
+	
+Aldehyde	[#6;H1;D2;!$([#6][!#6;!#1])]=[#8]
+  Aldehyde.Aromatic	[#6;a;H1;D2;!$([#6][!#6;!#1])]=[#8]
+  Aldehyde.Aliphatic	[#6;A;H1;D2;!$([#6][!#6;!#1])]=[#8]
+	
+Halogen	[$([#9,#17,#35,#53][#6]);!$([#9,#17,#35,#53][#6](=[!#6]))]
+  Halogen.Aromatic	[$([#9,#17,#35,#53][#6;a]);!$([#9,#17,#35,#53][#6](=[!#6]))]
+  Halogen.Aliphatic	[$([#9,#17,#35,#53][#6;A]);!$([#9,#17,#35,#53][#6](=[!#6]))]
+  Halogen.Fluorine	[$([#9][#6]);!$([#9][#6](=[!#6]))]
+  Halogen.Fluorine.Aliphatic	[$([#9][#6;A]);!$([#9][#6](=[!#6]))]
+  Halogen.Fluorine.Aromatic	[$([#9][#6;a]);!$([#9][#6](=[!#6]))]
+  Halogen.Fluorine.Trifluoromethyl	[#9][#6;D4;H0]([#9])[#9]
+  Halogen.Chlorine	[$([#17][#6]);!$([#17][#6](=[!#6]))]
+  Halogen.Chlorine.Aliphatic	[$([#17][#6;A]);!$([#17][#6](=[!#6]))]
+  Halogen.Chlorine.Aromatic	[$([#17][#6;a]);!$([#17][#6](=[!#6]))]
+  Halogen.Bromine	[$([#35][#6]);!$([#35][#6](=[!#6]))]
+  Halogen.Bromine.Aliphatic	[$([#35][#6;A]);!$([#35][#6](=[!#6]))]
+  Halogen.Bromine.Aromatic	[$([#35][#6;a]);!$([#35][#6](=[!#6]))]
+  Halogen.Bromine.BromoKetone	[#35;$([#35][#6;H2;D2][#6](=[#8])[#6])]
+  Halogen.Iodine	[$([#53][#6]);!$([#53][#6](=[!#6]))]
+  Halogen.Iodine.Aliphatic	[$([#53][#6;A]);!$([#53][#6](=[!#6]))]
+  Halogen.Iodine.Aromatic	[$([#53][#6;a]);!$([#53][#6](=[!#6]))]
+  	
+Azide	[$([#7;D1]=[#7;D2]=[#7;D2]),$([#7;D1]-[#7;D2]#[#7;D2])]
+  Azide.Aromatic	[$([#7D1]=[#7D2]=[#7D2][#6;a]),$([#7D1]-[#7D2]#[#7D2][#6;a])]
+  Azide.Aliphatic	[$([#7D1]=[#7D2]=[#7D2][#6;A]),$([#7D1]-[#7D2]#[#7D2][#6;A])]
+	
+Nitro	[#7;H0;$([#7][#6]);D3](~[#8;D1])~[#8;D1]
+  Nitro.Aromatic	[#7;H0;$([#7][#6;a]);D3](~[#8;D1])~[#8;D1]
+  Nitro.Aliphatic	[#7;H0;$([#7][#6;A]);D3](~[#8;D1])~[#8;D1]
+	
+CarboxylicEster	[#6;D3](=[#8])!@[#8;D2]!@[#6]
+  CarboxylicEster.Aromatic	[#6;D3;a](=[#8])!@[#8;D2]!@[#6]
+  CarboxylicEster.Aliphatic	[#6;D3;A](=[#8])!@[#8;D2]!@[#6]
+	
+Lactone	[#6;D3;R](=[#8])@[#8;R;D2]@[#6;R]
+  	
+Sulfoxide	[#16](=[#8;D1])
+  Sulfoxide.Sulfone	[#16](=[#8;D1])(=[#8;D1])
+    Sulfoxide.Sulfone.Aliphatic	[#16](=[#8;D1])(=[#8;D1])[#6;A]
+    Sulfoxide.Sulfone.Aromatic	[#16](=[#8;D1])(=[#8;D1])[#6;a]
+  Sulfoxide.Sulfone.Sulfonamide	[#16;D4](=[#8;D1])(=[#8;D1])([#7])[#6,#1]
+    Sulfoxide.Sulfone.Sulfonamide.Aliphatic	[#16;D4](=[#8;D1])(=[#8;D1])([#7])[#6;A]
+    Sulfoxide.Sulfone.Sulfonamide.Aromatic	[#16;D4](=[#8;D1])(=[#8;D1])([#7])[#6;a]
+  Sulfoxide.Sulfone.Sulfamide	[#16;D4](=[#8;D1])(=[#8;D1])([#7])[#7]
+    Sulfoxide.Sulfone.Sulfamide.Aliphatic	[#16;D4](=[#8;D1])(=[#8;D1])([#7])[#7;A]
+    Sulfoxide.Sulfone.Sulfamide.Aromatic	[#16;D4](=[#8;D1])(=[#8;D1])([#7])[#7;a]
+  Sulfoxide.Sulfone.SulfonicAcid	[#16;D4](=[#8;D1])(=[#8;D1])([#8;H1,-])[#6,#1]
+    Sulfoxide.Sulfone.SulfonicAcid.Aliphatic	[#16;D4](=[#8;D1])(=[#8;D1])([#8;H1,-])[#6;A]
+    Sulfoxide.Sulfone.SulfonicAcid.Aromatic	[#16;D4](=[#8;D1])(=[#8;D1])([#8;H1,-])[#6;a]
+  Sulfoxide.Sulfone.SulfonylChloride	[#16;D4](=[#8;D1])(=[#8;D1])([#17])[#6,#1]
+    Sulfoxide.Sulfone.SulfonylChloride.Aliphatic	[#16;D4](=[#8;D1])(=[#8;D1])([#17])[#6;A]
+    Sulfoxide.Sulfone.SulfonylChloride.Aromatic	[#16;D4](=[#8;D1])(=[#8;D1])([#17])[#6;a]
+	
+Imine	[#6](=[#7][#1,#6])([#1,#6])[#6]
+  Imine.Aldo.Primary	[#6](=[#7][#1])([#1])[#6]
+  Imine.Aldo.Secondary	[#6](=[#7][#6])([#1])[#6]
+  Imine.Keto.Primary	[#6](=[#7][#1])([#6])[#6]
+  Imine.Keto.Secondary	[#6](=[#7][#6])([#6])[#6]
+	
+Organometal	[#6]-[Mg,Si,Sn,Zn,Hg]
+  Organometal.Magnesium	[#6]-[Mg]
+  Organometal.Silicon	[#6]-[Si]
+  Organometal.Tin	[#6]-[Sn]
+  Organometal.Zinc	[#6]-[Zn]
+  Organometal.Mercury	[#6]-[Hg]
+	
+Alkene	[$([#6]!@[#6])]=[#6]
+  Alkene.Aliphatic	[$([#6]!@[#6;A])]=[#6]
+  Alkene.Aromatic	[$([#6]!@[#6;a])]=[#6]
+  Alkene.Terminal	[$([#6]!@[#6])]=[#6;D1;H2]
+  Alkene.Conjugated	[$([#6]!@[#6]=[*])]=[#6]
+	
+Alkyne	[#6][#6]#[#6]
+  Alkyne.Terminal	[#6][#6]#[#6;D1;H1]
+  Alkyne.Conjugated	[#6][#6]#[#6;D2;H0][#6]!-[*]
+	
+Alkyne	[$([#6]!@[#6])]#[#6]
+  Alkyne.Aliphatic	[$([#6]!@[#6;A])]#[#6]
+  Alkyne.Aromatic	[$([#6]!@[#6;a])]#[#6]
+  Alkyne.Terminal	[$([#6]!@[#6])]#[#6;D1;H1]
+	
+Amide	[$([#6;D3]);!$([#6][!#6])](=[#8])!@[#7]
+  Amide.Primary	[$([#6;D3]);!$([#6][!#6])](=[#8])!@[#7;H2;D1]
+    Amide.Primary.Aliphatic	[$([#6;D3]);$([#6][#6;A])](=[#8])!@[#7;H2;D1]
+    Amide.Primary.Aromatic	[$([#6;D3]);$([#6][#6;a])](=[#8])!@[#7;H2;D1]
+  Amide.Secondary	[$([#6;D3]);!$([#6][!#6])](=[#8])!@[#7;H1;D2]
+    Amide.Secondary.Aliphatic	[$([#6;D3]);$([#6][#6;A])](=[#8])!@[#7;H1;D2]
+    Amide.Secondary.Aromatic	[$([#6;D3]);$([#6][#6;a])](=[#8])!@[#7;H1;D2]
+  Amide.Tertiary	[$([#6;D3]);!$([#6][!#6])](=[#8])!@[#7;H0;D3]
+    Amide.Tertiary.Aliphatic	[$([#6;D3]);$([#6][#6;A])](=[#8])!@[#7;H0;D3]
+    Amide.Tertiary.Aromatic	[$([#6;D3]);$([#6][#6;a])](=[#8])!@[#7;H0;D3]
+	
+Lactam	[#6;D3;R](=[#8])@[#7;R]@[#6;R]
+	
+Ether	[#8;D2](!@[#6;D2])!@[#6;D2]
+  Ether.Aliphatic	[#8;D2](!@[#6;D2])!@[#6;D2;A]
+  Ether.Aromatic	[#8;D2](!@[#6;D2])!@[#6;D2;a]
+	
+Methoxy	[#8;H1]!@[$([#6]);!$([#6]=[!#6])]
+	
+Acetal	[#8;D2][#6;D4;!$([#6][#8]~[!#6])][#8;D2]
+Amidine	[#7;D3][#6]=[#7;D2]
+Aminal	
+Azo	
+Carbamate	
+Carbonate	
+CarboxylicAnhydride	
+Chloroformate	
+Disulfide	
+Epoxide	
+Guanidine	
+Hemiacetal	
+Hemiaminal	
+Hydrazide	
+Azine	
+Hydrazine	
+Hydrazone	
+Hydroperoxide	
+Imide	
+Isonitrile
+
+Ketone	[$(C-!@[#6])](=O)[#6]
+  Ketone.Aliphatic	 [$(C-!@[C])](=O)[#6]
+  Ketone.Aromatic	[$(C-!@[a])](=O)[#6]
+
+Nitrile	[$(C-!@[#6])](#N)
+  Nitrile.Aliphatic	[$(C-!@C)](#N)
+  Nitrile.Aromatic	[$(C-!@c)](#N)
+
+Acylcyanide	[$([#6]-!@[#6])](=O)C#N
+  Acylcyanide.Aliphatic	[$([#6]-!@C)](=O)C#N
+  Acylcyanide.Aromatic	[$([#6]-!@c)](=O)C#N
+
+Nitroso	
+Oxazine	
+Oxime	
+Peroxide	
+Thioacetal	
+Dithioacetal	
+Thioamide	
+Thiocarbamate	
+Thiocarbonate	
+Thioester	S([#6])[$(C-!@[#6])](=O)
+Thioester.Aliphatic	S([#6])[$(C-!@C)](=O)
+Thioester.Aromatic	S([#6])[$(C-!@c)](=O)
+Thioether (sulfide)
+
+Thiol	[S;H1;$(O-!@[#6;!$(C=!@[O,N])])]
+  Thiol.Aliphatic	[[S;H1;$(O-!@[C;!$(C=!@[O,N])])]
+  Thiol.Aromatic	[S;H1;$(S-!@c)]
+
+Thiophene	
+Thiourea	
+Urea	
+Xanthate	
+Lactam	
+Lactone	
+SpiroRing	
+Piperazine	
+Aniline	
+Indole	
+Oxazole	
+Isoxazole	
+Oxadiazole	
+Oxadiazole	
+Oxadiazole	
+Furazan	
+Imidazole	
+Pyrazole	
+Triazole	
+Triazole	
+Tetrazole	
+Pentazole	
+
+Phenyl	c1cccc1[$(c-!@[#6])]
+  Phenyl.Aliphatic	c1cccc1[$(c-!@C)]
+  Phenyl.Aromatic	c1cccc1[$(c-!@c)]
+
+Phosphonic acid	[$(P-!@[#6])]([#8])([#8])=O
+  Phosphonic acid.Aliphatic	[$(P-!@C)]([#8])([#8])=O
+  Phosphonic acid.Aromatic 	[$(P-!@c)]([#8])([#8])=O
+
+Phosphate	[$(O-!@[#6])]P([#8])([#8])=O
+  Phosphate.Aromatic	[$(O-!@c)]P([#8])([#8])=O
+  Phosphate.Aliphatic	[$(O-!@C)]P([#8])([#8])=O
+
+Phosphodiester	[$(O-!@[#6])]P([#8][#6])([#8])=O
+  Phosphodiester.Aliphatic	[$(O-!@C)]P([#8][#6])([#8])=O
+  Phosphodiester.Aromatic	[$(O-!@c)]P([#8][#6])([#8])=O
+
+Thiazole	
+Furan	
+Isothiazole	
+Pyridine	
+Pyrrolidine	
+Pyrrole	
+Piperidine	
